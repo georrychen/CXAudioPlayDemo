@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CXLMAudioView">
+            <rect key="frame" x="0.0" y="0.0" width="532" height="114"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7E-Yh-6el" userLabel="音频播放">
+                    <rect key="frame" x="0.0" y="10" width="532" height="58"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwc-ZA-kN3" userLabel="play">
+                            <rect key="frame" x="12" y="15" width="28" height="28"/>
+                            <state key="normal" image="ic_learn_play"/>
+                            <connections>
+                                <action selector="audioButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="uQa-8V-tay"/>
+                            </connections>
+                        </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DX-Yc-tGm">
+                            <rect key="frame" x="58" y="47" width="29" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="1" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ja-Nn-KFU">
+                            <rect key="frame" x="483" y="47" width="29" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="1" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cYg-8t-onj">
+                            <rect key="frame" x="56" y="14" width="458" height="31"/>
+                            <color key="minimumTrackTintColor" red="1" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="maximumTrackTintColor" red="0.93333333330000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="thumbTintColor" red="1" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="cYg-8t-onj" firstAttribute="centerY" secondItem="u7E-Yh-6el" secondAttribute="centerY" id="2eM-aA-mOC"/>
+                        <constraint firstItem="0ja-Nn-KFU" firstAttribute="trailing" secondItem="cYg-8t-onj" secondAttribute="trailing" id="74H-h2-Mtg"/>
+                        <constraint firstItem="cYg-8t-onj" firstAttribute="leading" secondItem="Cwc-ZA-kN3" secondAttribute="trailing" constant="18" id="Ssx-yC-HfV"/>
+                        <constraint firstAttribute="trailing" secondItem="cYg-8t-onj" secondAttribute="trailing" constant="20" id="Thk-by-g5S"/>
+                        <constraint firstItem="Cwc-ZA-kN3" firstAttribute="leading" secondItem="u7E-Yh-6el" secondAttribute="leading" constant="12" id="UlD-9E-SRg"/>
+                        <constraint firstItem="4DX-Yc-tGm" firstAttribute="top" secondItem="cYg-8t-onj" secondAttribute="bottom" constant="3" id="WKy-Gk-i5a"/>
+                        <constraint firstItem="0ja-Nn-KFU" firstAttribute="centerY" secondItem="4DX-Yc-tGm" secondAttribute="centerY" id="bkp-gZ-21q"/>
+                        <constraint firstAttribute="height" constant="58" id="crO-Yb-FMT"/>
+                        <constraint firstItem="4DX-Yc-tGm" firstAttribute="leading" secondItem="cYg-8t-onj" secondAttribute="leading" id="d8k-AN-8Bs"/>
+                        <constraint firstItem="Cwc-ZA-kN3" firstAttribute="centerY" secondItem="u7E-Yh-6el" secondAttribute="centerY" id="h1b-9T-TMY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="u7E-Yh-6el" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="eWh-m8-DvM"/>
+                <constraint firstItem="u7E-Yh-6el" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lQt-gd-avD"/>
+                <constraint firstAttribute="trailing" secondItem="u7E-Yh-6el" secondAttribute="trailing" id="lg4-2h-0Gj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="audioPlayView" destination="u7E-Yh-6el" id="1qT-jC-DYr"/>
+                <outlet property="audio_currentTimeLabel" destination="4DX-Yc-tGm" id="6ht-5B-TDk"/>
+                <outlet property="audio_playButton" destination="Cwc-ZA-kN3" id="YTF-I4-MGl"/>
+                <outlet property="audio_slider" destination="cYg-8t-onj" id="m24-Xz-cxO"/>
+                <outlet property="audio_slider_centerYCons" destination="2eM-aA-mOC" id="sbT-Eo-qHE"/>
+                <outlet property="audio_totoalTimeLabel" destination="0ja-Nn-KFU" id="2Up-UE-uBq"/>
+            </connections>
+            <point key="canvasLocation" x="65.217391304347828" y="-231.52173913043481"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_learn_play" width="28" height="28"/>
+    </resources>
+</document>
